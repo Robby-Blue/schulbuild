@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{darkmode} 
+\enabledarkmode 
+\usepackage{svg}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Neurobiologie}
+\rhead{September 2024}
+\begin{document}
+\section{Nervensystem}  
+ 
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Wort & Definition & Herleitung \\ 
+ \hline
+ afferent & zum ZNS & alphabetisch vor e \\ 
+ efferent & zurück vom ZNS & alphabetisch nach a \\ 
+ \hline
+\end{tabular}
+\end{center}
+\noindent Skizzieren Lernen
+\section{Nervenzellen}
+% TODO BILD EINFÜGEN
+ 
+\subsection{Die Entstehung des Ruhepotentials}
+Zu begin sind die Ionen innerhalb und außerhalb der Zelle ungleich verteilt, getrennt von einer semipermeablem Membran.
+ 
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+ Ionenart & Innen & Außen \\ 
+\hline
+ Kalium K$^+$ & 7 & 1 \\  
+\hline
+ Natrium Na$^+$ & 1 & 7 \\
+\hline
+ Chlorid Cl$^-$ & 2 & 6 \\  
+\hline
+ Organische Anionen A$^-$ & 4 & 0 \\
+\hline 
+\end{tabular}
+\end{center} 
+ 
+\noindent Dies sieht Beispielhaft so aus:
+ 
+\noindent \includesvg[inkscapelatex=false,width=\textwidth]{begin.svg}
+Wie schnell die verschiedenen Ionen durch die semipermeable Membram diffundieren können wird durch den Permeabilitätskoeffizienten angegeben.
+ 
+\begin{center}
+\begin{tabular}{ |c|c| }
+\hline
+ Ionenart & Permeabilitätskoeffizienten \\ 
+\hline
+ Kalium K$^+$ & 1.0 \\  
+\hline
+ Natrium Na$^+$ & 0.04 \\
+\hline
+ Chlorid Cl$^-$ & 0.45 \\  
+\hline
+ Organische Anionen A$^-$ & 0 \\
+\hline 
+\end{tabular}
+\end{center}
+Aufgrund des Konzentrationunterschiedes und des hohen Permeabilitätskoeffizienten diffundiert das K$^+$ als erstes von dem Zellinnere ins Zelläußere.
+Zur gleichen Zeit diffundiert aus dem gleichen Grund Cl$^-$ von außen nach innen, langsamer als das Kalium.
+Da nun positive Ladungen der K$^+$-Ionen den Innenraum verlassen und den Außenraum betreten und negative Ladungen der Cl$^-$-Ionen den Außenraum verlassen und Innenraum betreten, entsteht im Innenraum eine negative und im Außenraum eine positive Ladung. Somit entsteht eine Spannung.
+  
+\includesvg[inkscapelatex=false,width=\textwidth]{diff.svg}
+Um den Ladungsgradienten wieder auszugleichen wandern beide Ionenarten aber auch wieder in die entgegengesetze Richtung, sodass ein Gleichgewicht entsteht.
+Dieses Gleichgewicht, das Ruhepotential, liegt bei -70mV. 
+ 
+\includesvg[inkscapelatex=false,width=\textwidth]{ruhe.svg}
+Das Ruhepotential kann aber so nicht aufrecht erhalten werden: Die Na$^+$-Ionen diffundieren von außen nach innen, wodurch die Spannung sinkt.
+Damit dies nicht passiert gibt es die Natrium-Kalium-Pumpe, welche für ATP Kalium von außen nach innen und Natrium von innen nach außen Pumpt. 
+\section{Aktionspotential}
+Zu beginn liegt das Ruhepotential vor. Spannungsgesteuerte Ionenkanäle sind geschlossen. \newline
+\textbf{Vordepolarisation}: Durch ein Rezeptorpotential (o. ä.) kommt es zu einer kleinen Depolarisation. \newline
+\textbf{Depolarisation}: Der -50\,mV Schwellenwert wird erreicht und die spannungsgesteuerten Natrium-Ionenkanäle öffnen sich. Natrium-Ionen strömen rein. Das Membranpotential steigt auf +35\,mV \newline
+\textbf{Repolarisation}: Die Natrium-Ionenkanäle schließen sich wieder, dafür öffnen sich aber Kalium-Ionenkanäle und Kalium strömt in den Innenraum. Dadurch sinkt das Membranpotential. Diese Phase hält an, bis es -70\,mV erreicht. \newline
+\textbf{Hyperpolarisation}: Da die Kalium-Ionenkanäle noch offen sind, strömt weiter Kalium in das Zellinnere, sodass das Membranpotential auf $<$ -70 mV sinkt. \newline
+Zum Ende schließen sich erneut alle spannungsgesteuerten Kanäle und das Ruhepotential kehrt zurück.
+\section{Ionenkanäle}
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+ Art & Funktionsweise \\ 
+\hline
+ Mechanisch & Dehnung der Zellmembran \\
+\hline
+ Spannungs & Offnet sich basierend auf der umliegenden Spannung \\
+\hline
+ Liganden & Ligand (Ion) bindet mit Schlüssel-Schloss-Prinzip an Bindungsstelle \\
+\hline 
+\end{tabular}
+\end{center} 
+\section{Synapsen}
+TODO BILD EINFÜGEN
+\subsection{Erregungsübertragung}
+Das ankommende Aktionspotential öffnet einen spannungsgesteuerten Calcium-Ionenkanal, sodass Ca$^{2+}$ reingelangt. Diese binden sich an die Vesikel, welche zur präsynaptischen Membran diffundieren. \newline
+Dadurch, dass die Vesikel mit der prä. Memb. verschmelzen, werden die Neurotransmitter \textbf{ACh (Acetylcholin)} in den synaptischen Spalt freigelassen, wo sie zur postsynaptischen Membran diffundieren und binden. \newline
+Dieses binden öffnet ligandengesteuerte Na$^+$ Kanäle und etwas Na$^+$ gelangt in die postsynapse. Dort kommt es zu einer Depolarisation, einem \textbf{EPSP (exitatorisches postsynapitsches Potential)} und das Potential ist übertragen. \newline
+Danach wird das Acetylcholin durch \textbf{Cholinesterase} in A und Ch gespalten, welche wider in die präsynapse diffundieren können, wo sie sich zu ACh bilden können und sich die Vesikel mit Neurotransmitter neu bilden können.
+\end{document}
+ 

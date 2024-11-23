@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{darkmode} 
+\enabledarkmode
+\usepackage{svg}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Mathematik}
+\rhead{September 2024}
+ 
+\begin{document}
+  
+\section{Lineare Gleichungssysteme Lösen}
+Alle gleichen Variablen in die gleiche Spalte bringen, dann lösen als Gleichungssystem oder als Matrix.
+ 
+Beim Aufschreiben als Matrix runde Klammern, beim Aufschreiben als Gleichungssystem mit Linien links und rechts.
+ 
+Anzahl der Lösungen:
+\begin{multicols}{3} 
+\noindent 
+\[
+\begin{pmatrix}
+  * & * & * & * \\
+  * & * & * & * \\
+  0 & 0 & 1 & a \\
+\end{pmatrix}
+\]
+\centering Eine
+ 
+\columnbreak 
+\noindent 
+\[
+\begin{pmatrix}
+  * & * & * & * \\
+  * & * & * & * \\
+  0 & 0 & 0 & 1 \\
+\end{pmatrix}
+\] 
+\centering Keine
+ 
+\columnbreak 
+\noindent 
+\[
+\begin{pmatrix}
+  * & * & * & * \\
+  * & * & * & * \\
+  0 & 0 & 0 & 0 \\
+\end{pmatrix}
+\] 
+\centering Unendlich viele
+ 
+\end{multicols}
+ 
+\subsection{Unendliche Lösungen} 
+Bei gegebener Beispielslösungsmatrix 
+\[
+\begin{pmatrix} 
+  1 & 0 & -3 & 2 \\
+  0 & 1 &  4 & 1 \\
+  0 & 0 &  0 & 0 \\
+\end{pmatrix}
+\] 
+liegt $1x-3z=2$ und $1y+4z=1$ vor. $z$ kann jede mögliche (reelle) Zahl sein, also gilt $z \in \mathbb{R}$. Nun müssen mithilfe von $z$ alle anderen Variablen definiert werden. Folgend ist die Lösung also $\mathbb{L}=\{(x=2+3z|y=1-4z|z);z \in \mathbb{R}\}$
+ 
+\section{Steckbriefaufgaben}
+Zuerst die Bedingungen die in der Aufgabe stehen mathematisch aufschreiben. Die Funktionsform hat immer genau so viele unbekannte Variablen, wie es Bedingungen gibt. Das heißt, dass wenn alle Exponenten einer Ganzrationalen Funktion genutzt werden, der Grad eins weniger als die Anzahl der Bedingungen ist. (Hier nochmal nachsehen, wenn nicht alle genutzt werden) Dann die aus den Bedingungen und der Funktionsform folgenden Gleichungen aufschreiben und wie oben lösen.
+ 
+\section{Funktionsscharen}
+Funktionsscharen sind funktionen, welche von noch einer zweiten, konstanten, Variable beeinflusst werden. Eine Funktionsschar, welche von $k$ abhängt wird als $f_k(x)$ geschrieben.
+ 
+\subsection{Nullstellen}
+Ausgegangen von der Funktionsschar $f_k(x)=2x+t$, muss einfach nach $f_k(x)=0$ gelöst werden, sodass aus $0=2x+t$ folgt, dass $x_0=-\frac{1}{2}t$
+ 
+\subsection{Extrem- und Wendepunkte} 
+Ähnlich wie bei den Nullstellen kann auch die Ableitung einer Funktionsschar nach einer Nullstelle aufgelöst werden, welche dann genutzt werden kann. Beispielsweise beim bestimmen der Extrempunkte der Funktionsschar $f_k(x)=x^4-t^2 \cdot \frac{1}{2}x^2$ mit der Ableitung $f'_k(x)=4x^3-t^2 \cdot x$, folgen die Extremstellen $x_1,2=\pm \frac{t}{2}$ und $x_3=0$. Der Extrempunkt wäre natürlich $P(e_x|f_k(e_x)$, also wird eine der Extremstellen in die Funktionsschar eingesetzt, folgt $f_k(\frac{t}{2})=(\frac{t}{2})^4-t^2 \cdot \frac{1}{2} \cdot (\frac{t}{2})^2$, gekürzt $f_k(\frac{t}{2})=\frac{-t^4}{16}$.
+ 
+Somit ist die Extremstelle bei $P(\frac{t}{2}|\frac{-t^4}{16})$. Zum finden der Ortskurvenfunktion das $x=\frac{t}{2}$, nach t auflösen $t=2x$ und als t in die Ausgangsfunktion einsetzen.
+ 
+\section{Stetigkeit und Differenzierbarkeit}
+Die Stetigkeit einer Funktion beschreibt, ob diese Sprünge hat. Die Differenzierbarkeit einer Funktion ist die Stetigkeit der Ableitung der Funktion.
+Um die Stetigkeit der Nahtstelle $x_0$ zu bestimmen, muss 
+\[
+\lim_{x \to x_0^-} f(x) = \lim_{x \to x_0^+} f(x) 
+\]
+errechnet werden.
+ 
+\section{Ableitungsregeln}
+\subsection{Produktregel}
+\begin{align*} 
+f(x) &= u \cdot v \\
+f'(x) &= u' \cdot v + u \cdot v'
+\end{align*} 
+ 
+\subsection{Quotientenregel}
+\begin{align*} 
+f(x) &= \frac{u}{v} \\
+f'(x) &= \frac{u' \cdot v - u \cdot v'}{v^2}
+\end{align*}
+ 
+\subsection{Kettenregel}
+\begin{align*} 
+f(x) &= u^v \\
+f'(x) &= g' \cdot v \cdot u^v
+\end{align*} 
+ 
+\end{document}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

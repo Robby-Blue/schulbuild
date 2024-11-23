@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{darkmode} 
+\usepackage{tikz}
+\usepackage{amsmath}
+\enabledarkmode
+\usepackage{svg}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Physik, erste Klausur Lernzettel}
+\rhead{September 2024}
+\begin{document}
+\section{Mathe Basics}
+
+\begin{align*}
+    E &= \frac{U}{d} \\
+    E &= \frac{F_{el}}{Q} \\
+    W &= F \cdot s \\
+    F &= m \cdot g \\
+    U &= \frac{W}{Q} \\
+    I &= \frac{Q}{t} \\
+    \sigma &= \frac{Q}{A} \\
+    \sigma &= \frac{\varepsilon_0}{E} \\
+    F &= m \cdot a \\
+    v_x &= \frac{l}{t}
+\end{align*}
+
+\section{Experimente}
+\subsection{Millikan}
+Unglaublich kleine Öltropfen rein sprühen, die dann positiv Geladen sind.
+Am Plattenkondensator Spannung erhöhen bis eins Schwebt, also 
+\[F_g=F_{el}\]
+Beim Einfügen von $F_g$ und $F_{el}$ kommt man auf
+\begin{align}
+\setcounter{equation}{0}
+    m \cdot g &= E \cdot q \\
+    m \cdot g &= \frac{U}{d} \cdot q \\
+    q &= m \cdot g \cdot \frac{d}{U}
+\end{align}
+Bei wiederholung fällt auf, dass alle Öltröpfchen - bis auf Messfehler - den gemeinsamen gleichen kleinsten Teiler
+\[q=e=1,602 \cdot 10^{-19} C\]
+
+\subsection{Braunsche Röhre}
+Aufbau:
+\begin{enumerate}
+\item Glühwendel
+\item Wehneltzylinder
+\item Ringanode
+\item Ablenkkondensator
+\item Leuchtschirm
+\end{enumerate}
+
+Zudem muss man wissen:
+\[e_{kin} = \frac{1}{2}m{v_x}^2\]
+
+\subsection{Kraft der Ablenkung}
+\[tan(\gamma)=\frac{F_{el}}{F_G}\]
+von
+\[tan(\gamma)=\frac{\Delta x}{\Delta y}\]
+
+\subsection{Ladungsmessung mit Amperemeter}
+In einem t-I-Diagramm entsteht ein exponentiel Abnehmende Graph, dessen Fläche unter der Kurve Q darstellt. Kann mit Trapezen angenähert werden, wobei \(\frac{a+b}{2} \cdot h\)
+
+\subsection{Glimmlampe}
+\begin{enumerate}
+\item Neon under geringem Druck
+\item freie Elektronen und positive Ne-Ionen, weil radioaktive Strahulung
+\item elektronen angezogen zur Anode, schlagen auf, aber unsichtbar
+\item Ne-Ionen angezogen zur Kathode, schlagen auf, schlagen Elektronen raus
+\item Elektronen treffen auf Ne-Ionen, neutralisieren zu Ne-Atomen. Dies gibt Energie in form von Licht ab
+\item Elektronen ionisieren wieder, es fängt von vorne kontinuierlich an
+\end{enumerate}
+
+\section{Herleitungen}
+\subsection{$E=\frac{U}{d}$}
+Für Arbeit eine negative Ladung entgegen den Spannungsgradienten gilt \(W = F \cdot s\).
+Das führt du einer Spannungsänderung, wobei \(U = \frac{W}{Q}\).
+Nun muss man es nach \(E\) Auflösen.
+
+\begin{align*}
+    W &= U \cdot Q \\
+    F \cdot s &= U \cdot Q
+\intertext{Zusammen mit \(E = \frac{F}{Q}\) gilt \(F = E \cdot Q\)}
+    E \cdot Q \cdot s &= U \cdot Q \\
+    E \cdot s &= U \\
+    E &= \frac{U}{s}
+\end{align*}
+Mit der gegebenen Strecke $s$ = $d$ gilt dann
+\[E = \frac{U}{d}\]
+
+\subsection{Radialfeld}
+\begin{align*}
+    E &= \frac{\sigma}{\varepsilon_0} \\
+    \sigma &= \frac{Q}{A} \\
+    \sigma &= \frac{Q}{4 \pi r^2}
+\intertext{Beide Seiten durch $\sigma$ teilen}
+    E &= \frac{Q}{4 \pi r^2} \cdot \frac{1}{\varepsilon_0}
+\intertext{Mit $F = Q * E$ und umstellen}
+    F &= \frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q_1 \cdot Q_2}{r^2}
+\end{align*}
+
+\section{Anderes}
+Linien gehen von positiv zu negativ
+
+\subsection{Influenz}
+Freie Elektronen bewegen sich zur positiven Umgebungsladung
+\subsection{Polarisation}
+Elektronen innerhalb der Hülle bewegen sich zur positiben Umgebungsladung, die Hülle ist so nicht ganz rund.
+
+\end{document}
