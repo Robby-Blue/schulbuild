@@ -16,11 +16,14 @@ jobs:
       - name: Compile
         uses: Robby-Blue/latex-batch-action@v0.1
 
+      - name: Print Resolved Path
+        run: echo "$GITHUB_WORKSPACE/pdfs.zip"
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: pdfs.zip
-          path: $GITHUB_WORKSPACE/pdfs.zip
+          path: pdfs.zip
 
       - name: Upload to Discord
         env:
