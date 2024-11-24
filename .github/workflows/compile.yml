@@ -1,0 +1,31 @@
+# .github/workflows
+
+name: compile
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile
+        uses: Robby-Blue/latex-batch-action@v0.1
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs.zip
+          path: $GITHUB_WORKSPACE/pdfs.zip
+
+      - name: Upload to Discord
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        run: >
+          curl $WEBHOOK_URL -X POST -H "Content-Type: multipart/form-data"
+          -F 'payload_json={"username": "LaTex"}'
+          -F "files[0]=@$GITHUB_WORKSPACE/pdfs.zip;type=application/pdf"
